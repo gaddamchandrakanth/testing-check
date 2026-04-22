@@ -5,4 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: echo "test1"
+        run: |
+        echo "test3"
+        echo "test2"
