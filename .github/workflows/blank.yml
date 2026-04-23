@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name:  test1
-        run: echo "check-one, ${{vars.MY_NAME}}"
+        run: echo "check-one, ${{secrets.DOCKER_PASS}}"
   two:
     runs-on: ubuntu-latest
     needs: first
