@@ -13,15 +13,15 @@ jobs:
     steps:
       - name:  test1
         run: echo "check-one"
-  2nd:
+  two:
     runs-on: ubuntu-latest
     needs: first
     steps:
       - name: tst2
         run: echo "check-two"
-  3rd:
+  three:
     runs-on: ubuntu-latest
-    needs: 2nd
+    needs: two
     steps:
       - name: test3
         run: echo "check-three"
