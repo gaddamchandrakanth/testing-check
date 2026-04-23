@@ -1,22 +1,27 @@
-name: hello world
-on: 
+name: testing
+on:
   push:
     branches:
       - main
   pull_request:
     branches:
       - main
-
+      - test
 jobs:
-  build:
+  first:
     runs-on: ubuntu-latest
     steps:
-      - name: build
-        run: echo "one"
-
-  build1:
+      - name:  test1
+        run: echo "check-one"
+  2nd:
     runs-on: ubuntu-latest
     steps:
-      - name: build1
-        run: echo "two"
-  
+      - name: tst2
+        run: echo "check-two"
+        needs: first
+  3rd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test3
+        run: echo "check-three"
+        needs: 2nd
