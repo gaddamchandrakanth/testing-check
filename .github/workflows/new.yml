@@ -1,11 +1,12 @@
-name: index-print
+name: index
 
 on:
  push:
    branches:
      - main
  pull_request:
-   - main
+   branches: 
+     - main
 jobs:
   print:
     runs-on: ubuntu-latest
