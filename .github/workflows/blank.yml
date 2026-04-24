@@ -10,16 +10,10 @@ jobs:
   check1:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - name: test
         run: echo "checking1, ${{vars.what1}}"
 
   check2:
-=======
-      - name:  test1
-        run: echo "check-one, ${{secrets.DOCKER_PASS}}"
-  two:
->>>>>>> 0f7893a10e933ce2c583627f6405b31a0d7d1d3b
     runs-on: ubuntu-latest
     needs: check1
     steps:
