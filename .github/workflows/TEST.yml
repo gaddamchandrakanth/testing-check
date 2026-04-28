@@ -1,5 +1,5 @@
-name:  setting up env
+name: setting up env
 
 on: workflow_dispatch
 env:
-  APP_
+  APP_TEST: dev
