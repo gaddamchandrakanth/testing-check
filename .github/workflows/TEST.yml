@@ -1,5 +1,21 @@
-name: setting up env
-
-on: workflow_dispatch
-env:
-  APP_TEST: dev
+name: testing
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: choose env to deploy
+        required: true
+        default: dev
+        type: choice
+        options:
+          - dev
+          - testing-prod
+      artifact_tag:
+        description: choose tag to deploy
+        required: true
+  jobs:
+    inputs1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: deploy artifact
+          run: echo "deploying ${{inputs.}} application to ${{ inputs.environment}}"
