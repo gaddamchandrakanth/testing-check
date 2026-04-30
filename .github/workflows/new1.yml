@@ -1,4 +1,4 @@
-name: testing-pod/context variables
+name: pod
 
 on: push
 jobs:
