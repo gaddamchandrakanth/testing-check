@@ -1,0 +1,12 @@
+name: testing
+
+on: workflow_dispatch
+env:
+    WHAT1: "test"
+
+jobs:
+  test:
+    runs-on: 1 ubuntu-latest
+    steps:
+      - name: test-job
+        run: echo "testing is $WHAT1"
