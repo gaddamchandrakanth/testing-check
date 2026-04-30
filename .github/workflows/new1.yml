@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: use contaext variable
         run:  |
-          echo "this workflowis triggered by ${{ GitHub.actor }}
-          echo "this repository name is ${{ GitHub.repository }}
+          echo "this workflowis triggered by ${{ githubitHub.actor }}
+          echo "this repository name is ${{ github.repository }}
 
 
